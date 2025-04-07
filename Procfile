@@ -1,1 +1,2 @@
-web: gunicorn decoradores-python.wsgi:application
+gunicorn decoradores.wsgi:application
+
