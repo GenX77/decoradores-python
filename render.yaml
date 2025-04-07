@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: decoradores-python
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn decoradores-python.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: decoradores-python.settings
